@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MediaPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="backward"><![CDATA[<<]]></string>
+    <string name="play"><![CDATA[>]]></string>
+    <string name="forward"><![CDATA[>>]]></string>
+    <string name="pause">||</string>
+</resources>
+
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width = "fill_parent"
+    android:layout_height = "fill_parent">
+    <ImageView
+        android:id = "@+id/my_image"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentTop ="true" />
+
+    <!-- MUSIC TITLE -->
+    <TextView
+        android:id="@+id/musicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/times"
+        android:text="hello"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- TIME -->
+    <RelativeLayout
+        android:id="@+id/times"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar">
+
+        <TextView
+            android:id="@+id/actualTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/lengthTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text=""/>
+
+    </RelativeLayout>
+
+    <!-- SEAKER -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"/>
+
+    <!-- BUTTONS -->
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/backward"
+            android:id="@+id/button_backward"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="@string/pause"
+            android:id="@+id/button_pause"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "@string/play"
+            android:id="@+id/button_play"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "@string/forward"
+            android:id="@+id/button_forward"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</RelativeLayout>
