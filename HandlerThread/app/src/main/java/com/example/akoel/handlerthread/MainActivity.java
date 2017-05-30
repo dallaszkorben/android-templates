@@ -111,7 +111,7 @@ public class MainActivity extends Activity {
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }
-                //!!!! You are able to manimulate the UI elements from the Handler !!!!
+                //!!!! You are able to manipulate the UI elements from the Handler !!!!
                 progressBar.setProgress( i );
                 Log.d(msgID, "         " + msg.arg1 + ". thread / " + msg.arg2 + ": " + i + " counted" );
             }

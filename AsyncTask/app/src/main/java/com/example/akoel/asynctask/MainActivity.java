@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(tagMsg, "   " + this.hashCode() + ". task has triggered.");
 
         MyAsyncTask myTask = new MyAsyncTask(this.hashCode());
-        //myTask.execute("" + orderNumber++ );                                               //Running the tasks SERIAL
+        //myTask.execute("" + orderNumber++ );                                              //Running the tasks SERIAL
         myTask.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, "" + orderNumber++ );           //Running the tasks SERIAL
         //myTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "" + orderNumber++ );    //Running the tasks PARALLEL
 
@@ -34,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * !!!! It is not possible to setProgress() from the AsyncTask !!!!!
-     *
-     * @param pb
-     * @param status
      */
     public void changeStatusOfProgress(ProgressBar pb, int status){
         pb.setProgress(status);
